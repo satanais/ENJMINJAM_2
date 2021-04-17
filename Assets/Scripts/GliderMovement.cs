@@ -9,7 +9,9 @@ public class GliderMovement : MonoBehaviour
 
     private void Update()
     {
-        Vector3 input = Vector3.forward * Input.GetAxis("Vertical") + Vector3.right * Input.GetAxis("Horizontal");
+        Vector3 input = Vector3.right * Input.GetAxis("Vertical") + Vector3.up * Input.GetAxis("Horizontal");
+
+        transform.Rotate(input * speed * Time.deltaTime);
     }
 
 }
