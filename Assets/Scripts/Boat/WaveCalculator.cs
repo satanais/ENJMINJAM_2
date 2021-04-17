@@ -17,7 +17,6 @@ public class WaveCalculator : MonoBehaviour
     }
     public float WaveHeight(Vector3 pos, float time)
     {
-        // return Mathf.Sin(pos.x + time) * Mathf.Sin(pos.z + time);
-        return 0;
+        return Mathf.Sin(pos.x + pos.z + time) * 0.2f;
     }
 }
